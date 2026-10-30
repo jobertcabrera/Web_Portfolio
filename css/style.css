@@ -689,3 +689,21 @@ main {
 .site-footer {
     margin-top: auto !important;
 }
+
+[data-theme="dark"] .cta-band .btn--primary {
+    background-color: var(--accent-strong) !important; /* Bright purple */
+    color: #ffffff !important; /* White text */
+    border-color: var(--accent-strong) !important;
+}
+
+[data-theme="dark"] .cta-band .btn--primary:hover {
+    background-color: #ffffff !important;
+    color: #0b132b !important;
+    border-color: #ffffff !important;
+}
+
+[data-theme="dark"] .cta-band .btn--ghost {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
