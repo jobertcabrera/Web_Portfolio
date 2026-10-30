@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects | Jobert Cabrera, Graphic Designer</title>
+<meta name="description" content="Browse and search the graphic design projects of Jobert Cabrera: brand identity, digital marketing campaign, typographic poster and illustration.">
+<meta name="author" content="Jobert R. Cabrera">
+<link rel="canonical" href="https://YOUR-USERNAME.github.io/Web_Portfolio/projects">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jobert Cabrera Portfolio">
+<meta property="og:title" content="Projects | Jobert Cabrera, Graphic Designer">
+<meta property="og:description" content="Browse and search the graphic design projects of Jobert Cabrera: brand identity, digital marketing campaign, typographic poster and illustration.">
+<meta property="og:url" content="https://YOUR-USERNAME.github.io/Web_Portfolio/projects">
+<meta property="og:image" content="https://YOUR-USERNAME.github.io/Web_Portfolio/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Jobert Cabrera, graphic designer, with a selection of brand and campaign artwork">
+<meta name="twitter:card" content="summary_large_image">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action https://formspree.io; object-src 'none'; base-uri 'self';">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<script src="js/theme-init.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-root="" data-page="projects">
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="site-header"><noscript><p class="container"><a href="index.html">Home</a> · <a href="projects.html">Projects</a> · <a href="contact.html">Contact</a></p></noscript></header>
+<main id="main">
+<div class="container">
+  <header class="page-head">
+    <p class="kicker">Projects</p>
+    <h1>Selected work.</h1>
+    <p class="lede">Search by name, tool, category, year or type, and combine filters to narrow things down.</p>
+  </header>
+</div>
+<section class="container" id="projects-app">
+  <form class="filters" id="project-filters" role="search" aria-label="Search and filter projects" novalidate>
+    <div class="field search-field">
+      <label class="visually-hidden" for="project-search">Search projects</label>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" id="project-search" name="q" placeholder="Search by name, tool, category, year or type" autocomplete="off">
+    </div>
+    <div class="filter-selects">
+      <div class="field"><label for="filter-category">Category</label><select id="filter-category"><option value="">All categories</option></select></div>
+      <div class="field"><label for="filter-type">Project type</label><select id="filter-type"><option value="">All types</option></select></div>
+      <div class="field"><label for="filter-year">Year</label><select id="filter-year"><option value="">All years</option></select></div>
+      <div class="field"><label for="filter-tech">Technology</label><select id="filter-tech"><option value="">All technologies</option></select></div>
+    </div>
+    <div class="filters__status">
+      <p class="filters__count" id="result-count" role="status" aria-live="polite"></p>
+      <ul class="active-filters" id="active-filters" aria-label="Active filters"></ul>
+      <button type="button" class="text-link" id="reset-filters" data-reset hidden>Reset all filters</button>
+    </div>
+  </form>
+  <ul class="project-grid" id="projects-grid"></ul>
+  <div class="empty-state" id="empty-state" hidden>
+    <h2>No projects match.</h2>
+    <p>Try a different word or remove a filter.</p>
+    <button type="button" class="btn btn--ghost" data-reset>Show all projects</button>
+  </div>
+  <noscript><p>Please enable JavaScript to see the projects.</p></noscript>
+</section>
+</main>
+<footer id="site-footer"></footer>
+<script src="data/projects-data.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/projects.js" defer></script>
+</body>
+</html>
