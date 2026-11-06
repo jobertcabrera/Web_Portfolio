@@ -37,19 +37,38 @@
 </div>
 <section class="container">
   <div class="card-grid">
+    
+    <!-- CARD 1: EDUCATION -->
     <article class="card reveal">
       <p class="date">Expected graduation: 2028</p>
       <h2>Bachelor of Science in Information Technology</h2>
       <p class="timeline__org">City College of Calamba</p>
       <h3>Focus areas</h3>
       <ul class="bullet-list mt-3">
-        <li>Graphic design &amp; layout</li><li>UI/UX fundamentals</li><li>Digital illustration</li>
+        <li>Graphic design &amp; layout</li>
+        <li>UI/UX fundamentals</li>
+        <li>Digital illustration</li>
       </ul>
+    </article> <!-- MISSING TAG ADDED HERE -->
+
+    <!-- CARD 2: CERTIFICATIONS -->
+    <article class="card reveal" style="display: flex; flex-direction: column;">
+      <h2>Certifications</h2> <!-- TITLE ADDED BACK -->
+      <p class="date mt-3">2026</p>
+      <h3>The No-Code Creative: Figma for Talents and Local Businesses Workshop</h3>
+      <p class="timeline__org">Department of Information and Communications Technology</p>
+      
+      <!-- Shows the Image version -->
+      <div style="flex-grow: 1; margin-top: 1rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--line); background: #fff;">
+        <img src="assets/certificate.jpg" alt="Certificate of Participation" style="width: 100%; height: auto; display: block;">
+      </div>
+
+      <!-- Button to view the actual PDF if they want to -->
+      <div class="btn-row mt-3">
+        <a class="btn btn--ghost" href="assets/certificate.pdf" target="_blank" rel="noopener">View Full PDF</a>
+      </div>
     </article>
-    <article class="card reveal">
-      <h2>Certifications</h2>
-      <p class="timeline__org">None listed yet</p>
-    </article>
+
   </div>
 </section>
 </main>
