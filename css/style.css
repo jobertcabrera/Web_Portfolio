@@ -716,8 +716,6 @@ main {
     height: 2.1rem;
     flex: 0 0 auto;
     object-fit: contain;
-    border-radius: 50%;
-    background: #fff;
 }
 html { scroll-padding-top: calc(var(--header-h) + 1rem); }
 main > section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
