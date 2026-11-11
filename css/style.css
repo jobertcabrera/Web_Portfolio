@@ -840,3 +840,14 @@ main > section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
     justify-content: center;
     align-items: center;
 }
+
+
+/* Keep the Professional skills tags neatly inside their card. */
+.skill-group:not(.skill-group--wide) .tags {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.skill-group:not(.skill-group--wide) .tag {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
