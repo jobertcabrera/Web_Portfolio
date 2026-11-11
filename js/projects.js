@@ -128,7 +128,7 @@
         const index = PROJECTS.findIndex((p) => p.id === mount.dataset.id);
         const p = PROJECTS[index];
         if (!p) {
-            mount.innerHTML = `<div class="page-head"><h1>Project not found</h1><p class="lede">That project does not exist. <a href="${ROOT}projects.html">Browse all projects</a>.</p></div>`;
+            mount.innerHTML = `<div class="page-head"><h1>Project not found</h1><p class="lede">That project does not exist. <a href="${ROOT}index.html#projects">Browse all projects</a>.</p></div>`;
             return;
         }
         const prev = PROJECTS[(index - 1 + PROJECTS.length) % PROJECTS.length];
@@ -140,7 +140,7 @@
         const lead = p.gallery.length > 1 && p.gallery.length % 2 === 1 ? " gallery--lead" : "";
 
         mount.innerHTML = `
-            <p class="crumbs"><a href="${ROOT}projects.html">Projects</a> / <span>${esc(p.name)}</span></p>
+            <p class="crumbs"><a href="${ROOT}index.html#projects">Projects</a> / <span>${esc(p.name)}</span></p>
             <header class="detail-head">
                 <p class="kicker">${esc(p.category)} · ${esc(p.type)}</p>
                 <h1>${esc(p.name)}</h1>
@@ -170,7 +170,7 @@
                 <a href="${projectUrl(prev)}" rel="prev"><small>← Previous</small><strong>${esc(prev.name)}</strong></a>
                 <a href="${projectUrl(next)}" rel="next"><small>Next →</small><strong>${esc(next.name)}</strong></a>
             </nav>
-            <p class="mt-4"><a class="btn btn--ghost" href="${ROOT}projects.html">← Back to all projects</a></p>`;
+            <p class="mt-4"><a class="btn btn--ghost" href="${ROOT}index.html#projects">← Back to all projects</a></p>`;
         window.JC.initReveal(mount);
         initLightbox(mount, p);
     }
