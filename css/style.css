@@ -812,3 +812,63 @@ main > section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
     .brand { font-size: .88rem; }
     .icon-btn { width: 2.3rem; height: 2.3rem; }
 }
+
+
+/* FOLLOW-UP POLISH — project details and mobile portrait */
+#project-detail {
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-block: clamp(1.25rem, 3vw, 2.5rem) clamp(2.5rem, 6vw, 4.5rem);
+}
+#project-detail .crumbs { padding-top: 0; margin-bottom: clamp(1.25rem, 3vw, 2rem); }
+#project-detail .detail-head {
+    max-width: 50rem; margin: 0; padding-block: 0 clamp(1.25rem, 3vw, 2rem); text-align: left;
+}
+#project-detail .detail-head h1 {
+    max-width: 20ch; margin-bottom: .8rem; text-align: left;
+    font-size: clamp(2rem, 5vw, 3.65rem); line-height: 1.06; letter-spacing: -.035em;
+}
+#project-detail .detail-head .lede { max-width: 62ch; margin: 0; line-height: 1.7; }
+#project-detail .meta-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+    gap: .75rem; border: 0; margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+#project-detail .meta-grid div {
+    min-width: 0; padding: 1rem; border: 1px solid var(--line);
+    border-radius: var(--radius); background: var(--surface);
+}
+#project-detail .meta-grid dd { overflow-wrap: anywhere; line-height: 1.45; }
+#project-detail .detail-cols { gap: 1rem; margin-bottom: clamp(2.5rem, 6vw, 4rem); }
+#project-detail .detail-cols section {
+    min-width: 0; padding: clamp(1rem, 2.5vw, 1.5rem);
+    border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface);
+}
+#project-detail .detail-cols h2 { padding-top: 0; margin-bottom: .7rem; border-top: 0; font-size: var(--step-2); }
+#project-detail .detail-cols p, #project-detail .detail-cols li { line-height: 1.7; }
+#project-detail .detail-cols .tags { margin-top: .25rem; }
+#project-detail .gallery { gap: clamp(1rem, 2.5vw, 1.5rem); margin-bottom: clamp(2rem, 5vw, 3rem); }
+#project-detail .shot__btn { aspect-ratio: 4 / 3; border-radius: var(--radius-lg); background: var(--surface-2); }
+#project-detail .shot__btn img { object-fit: contain; }
+#project-detail .shot figcaption { display: grid; gap: .25rem; padding: .85rem .15rem 0; }
+#project-detail .shot figcaption span { line-height: 1.55; }
+#project-detail .pager { gap: .85rem; }
+#project-detail .pager a {
+    min-width: 0; padding: 1.1rem; border: 1px solid var(--line);
+    border-radius: var(--radius-lg); background: var(--surface); overflow-wrap: anywhere;
+}
+#project-detail .pager a:last-child { text-align: right; }
+#project-detail .pager a:hover { border-color: var(--accent); }
+#project-detail > p.mt-4 { margin-top: 1.5rem; }
+@media (max-width: 860px) {
+    body[data-page="home"] .hero .portrait__badge { display: none; }
+}
+@media (max-width: 640px) {
+    #project-detail { padding-top: 1.25rem; }
+    #project-detail .detail-head h1 { font-size: clamp(1.9rem, 8vw, 2.7rem); }
+    #project-detail .meta-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #project-detail .meta-grid div { padding: .85rem; }
+    #project-detail .detail-cols { grid-template-columns: minmax(0, 1fr); gap: .8rem; }
+    #project-detail .gallery { grid-template-columns: minmax(0, 1fr); }
+    #project-detail .pager { grid-template-columns: minmax(0, 1fr); }
+    #project-detail .pager a:last-child { text-align: left; }
+}
