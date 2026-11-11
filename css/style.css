@@ -829,3 +829,14 @@ main > section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
     .pager { gap: .75rem; }
     .pager a { min-width: 0; }
 }
+
+
+/* Center the copyright notice in the footer. */
+.site-footer__legal {
+    text-align: center;
+}
+.site-footer__legal .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
