@@ -65,10 +65,10 @@
         const mount = document.getElementById("site-header");
         if (!mount) return;
         const links = NAV.map((n) =>
-            `<li><a class="nav__link" href="${ROOT}${n.href}"${n.id === PAGE ? ' aria-current="page"' : ""}>${n.label}</a></li>`).join("");
+            `<li><a class="nav__link" href="${ROOT}${PAGE === "home" ? "#" + n.id : "index.html#" + n.id}"${n.id === PAGE ? ' aria-current="page"' : ""}>${n.label}</a></li>`).join("");
         mount.innerHTML = `
             <div class="container site-header__inner">
-                <a class="brand" href="${ROOT}index.html" aria-label="${esc(SITE.brand)}, home"><span class="brand__mark" aria-hidden="true">${SITE.initials}</span><span>${esc(SITE.brand)}</span></a>
+                <a class="brand" href="${ROOT}index.html#home" aria-label="${esc(SITE.brand)}, home"><img class="brand__logo" src="${ROOT}assets/icon.webp" alt="" width="36" height="36"><span>${esc(SITE.brand)}</span></a>
                 <nav class="nav" aria-label="Main">
                     <ul class="nav__list" id="nav-list">${links}</ul>
                     <button type="button" class="icon-btn theme-toggle" id="theme-toggle" aria-label="Switch to dark theme">
@@ -189,11 +189,32 @@
         }).catch(() => { });
     }
 
+    /* ---------- 7. Single-page section navigation ---------- */
+    function initSectionNav() {
+        if (PAGE !== "home") return;
+        const links = [...document.querySelectorAll(".nav__link")];
+        const sections = NAV.map((n) => document.getElementById(n.id)).filter(Boolean);
+        if (!("IntersectionObserver" in window) || !sections.length) return;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                links.forEach((link) => {
+                    const active = link.getAttribute("href").endsWith("#" + entry.target.id);
+                    if (active) link.setAttribute("aria-current", "page");
+                    else link.removeAttribute("aria-current");
+                });
+            });
+        }, { rootMargin: "-25% 0px -60% 0px", threshold: 0 });
+        sections.forEach((section) => observer.observe(section));
+    }
+
     /* ---------- boot ---------- */
     renderHeader();
     renderFooter();
     fillSiteFields();
     initMenu();
+    initSectionNav();
     initTheme();
     initCV();
     initReveal();
