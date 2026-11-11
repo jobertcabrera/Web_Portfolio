@@ -812,3 +812,20 @@ main > section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
     .brand { font-size: .88rem; }
     .icon-btn { width: 2.3rem; height: 2.3rem; }
 }
+
+
+/* Final responsive polish: keep the mobile portrait clean and detail pages consistent. */
+@media (max-width: 860px) {
+    body[data-page="home"] .hero .portrait__badge { display: none; }
+    .detail-head { padding-block: clamp(1.5rem, 5vw, 2.5rem); }
+    .detail-cols { gap: 1.5rem; }
+    .meta-grid { gap: .75rem; }
+}
+@media (max-width: 640px) {
+    .detail-head h1 { font-size: clamp(1.8rem, 7vw, 2.35rem); line-height: 1.15; }
+    .crumbs { padding-top: 1.25rem; }
+    .detail-cols { margin-bottom: 2.5rem; }
+    .gallery { gap: 1rem; }
+    .pager { gap: .75rem; }
+    .pager a { min-width: 0; }
+}
