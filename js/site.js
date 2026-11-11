@@ -68,7 +68,7 @@
             `<li><a class="nav__link" href="${ROOT}${PAGE === "home" ? "#" + n.id : "index.html#" + n.id}"${n.id === PAGE ? ' aria-current="page"' : ""}>${n.label}</a></li>`).join("");
         mount.innerHTML = `
             <div class="container site-header__inner">
-                <a class="brand" href="${ROOT}index.html#home" aria-label="${esc(SITE.brand)}, home"><img class="brand__logo" src="${ROOT}assets/icon.webp" alt="" width="36" height="36"><span>${esc(SITE.brand)}</span></a>
+                <a class="brand" href="${ROOT}index.html#home" aria-label="${esc(SITE.brand)}, home"><img class="brand__logo" src="${ROOT}favicon.svg" alt="" width="36" height="36"><span>${esc(SITE.brand)}</span></a>
                 <nav class="nav" aria-label="Main">
                     <ul class="nav__list" id="nav-list">${links}</ul>
                     <button type="button" class="icon-btn theme-toggle" id="theme-toggle" aria-label="Switch to dark theme">
