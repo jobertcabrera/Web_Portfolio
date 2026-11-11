@@ -27,14 +27,14 @@
 
     // RUBRIC #12: Navigation MUST include Home, About, Skills, Experience, Projects, Education, CV, Contact.
     const NAV = [
-        { id: "home", label: "Home", href: "index.html" },
-        { id: "about", label: "About", href: "about.html" },
-        { id: "skills", label: "Skills", href: "skills.html" },
-        { id: "experience", label: "Experience", href: "experience.html" },
-        { id: "projects", label: "Projects", href: "projects.html" },
-        { id: "education", label: "Education", href: "education.html" },
-        { id: "cv", label: "CV", href: "cv.html" },
-        { id: "contact", label: "Contact", href: "contact.html" }
+        { id: "home", label: "Home", href: "index.html#home" },
+        { id: "about", label: "About", href: "index.html#about" },
+        { id: "skills", label: "Skills", href: "index.html#skills" },
+        { id: "experience", label: "Experience", href: "index.html#experience" },
+        { id: "projects", label: "Projects", href: "index.html#projects" },
+        { id: "education", label: "Education", href: "index.html#education" },
+        { id: "cv", label: "CV", href: "index.html#cv" },
+        { id: "contact", label: "Contact", href: "index.html#contact" }
     ];
     const FOOTER_NAV = NAV; // Footer can use the exact same list
 
