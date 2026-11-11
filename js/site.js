@@ -92,8 +92,8 @@
                     <p><a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a></p>
                     ${socialsHTML()}
                 </div>
-                <nav aria-label="Footer"><h3>Pages</h3><ul>${FOOTER_NAV.slice(0, 4).map((n) => `<li><a href="${ROOT}${n.href}">${n.label}</a></li>`).join("")}</ul></nav>
-                <nav aria-label="More"><h3>More</h3><ul>${FOOTER_NAV.slice(4).map((n) => `<li><a href="${ROOT}${n.href}">${n.label}</a></li>`).join("")}</ul></nav>
+                <nav aria-label="Footer"><h3>Pages</h3><ul>${FOOTER_NAV.slice(0, 4).map((n) => `<li><a href="${ROOT}index.html#${n.id}">${n.label}</a></li>`).join("")}</ul></nav>
+                <nav aria-label="More"><h3>More</h3><ul>${FOOTER_NAV.slice(4).map((n) => `<li><a href="${ROOT}index.html#${n.id}">${n.label}</a></li>`).join("")}</ul></nav>
             </div>
             <div class="site-footer__legal"><div class="container"><p>&copy; ${new Date().getFullYear()} ${esc(SITE.name)}. All rights reserved.</p></div></div>`;
     }
